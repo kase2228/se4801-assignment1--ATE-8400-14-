@@ -4,5 +4,9 @@ public enum OrderStatus {
     PENDING,
     SHIPPED,
     DELIVERED,
-    CANCELLED
+    CANCELLED;
+
+    public boolean isTerminal() {
+        return this == DELIVERED || this == CANCELLED;
+    }
 }
