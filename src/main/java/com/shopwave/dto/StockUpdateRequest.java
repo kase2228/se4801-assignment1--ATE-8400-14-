@@ -1,8 +1,17 @@
 package com.shopwave.dto;
 
-import lombok.Data;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class StockUpdateRequest {
-    private int delta;
+
+    @NotNull(message = "Delta must not be null")
+    @ToString.Include
+    private Integer delta;
 }
