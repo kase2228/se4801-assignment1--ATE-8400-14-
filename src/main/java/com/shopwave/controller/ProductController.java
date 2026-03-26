@@ -1,3 +1,4 @@
+//ATE/8400/14
 package com.shopwave.controller;
 
 import com.shopwave.dto.*;
@@ -26,7 +27,7 @@ public class ProductController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
 
-        Pageable pageable = PageRequest.of(page, size); // ✅ FIX
+        Pageable pageable = PageRequest.of(page, size);
         return ResponseEntity.ok(productService.getAllProducts(pageable));
     }
 
@@ -49,7 +50,7 @@ public class ProductController {
     @GetMapping("/products/search")
     public ResponseEntity<List<ProductDTO>> searchProducts(
             @RequestParam(required = false) String keyword,
-            @RequestParam(required = false) BigDecimal maxPrice) { // ✅ FIX
+            @RequestParam(required = false) BigDecimal maxPrice) {
 
         return ResponseEntity.ok(productService.searchProducts(keyword, maxPrice));
     }
