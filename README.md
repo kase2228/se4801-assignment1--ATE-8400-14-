@@ -153,7 +153,7 @@ You should see the container starting in your console output.
 |------------|------|-------------|
 | ProductRepositoryTest | @DataJpaTest + H2 | Tests findByNameContainingIgnoreCase |
 | ProductServiceTest | Mockito unit test | Tests createProduct happy/error path, updateStock |
-| ProductControllerTest | @SpringBootTest + MockMvc | Tests GET /api/products and GET /api/products/999 |
+| ProductControllerTest | @WebMvcTest | Tests GET /api/products returns 200, GET /api/products/999 returns 404 with error JSON |
 | ProductRepositoryContainerTest | Testcontainers + PostgreSQL | Bonus — same repository tests against real DB |
 
 ---
