@@ -158,4 +158,16 @@ You should see the container starting in your console output.
 
 ---
 
+---
+
+## AI Assistance Disclosure
+
+This project was developed with the assistance of Claude and Chat GPT as coding advisors.
+AI suggestions were reviewed, understood, and adapted throughout — including resolving
+annotation deprecations, test configuration issues, and entity design decisions.
+All code was verified by running the application locally, testing endpoints via Insomnia,
+and confirming all 18 tests pass via mvn test.
+
+---
+
 
